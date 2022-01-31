@@ -7,6 +7,74 @@
     font-family: 'Poppins', sans-serif;
 }
 
+header.animate {
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.opener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #042104;
+    animation: animateBg 10% linear infinite;
+}
+
+@keyframes animateBg {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.opener .loader {
+    position: relative;
+    width: 100vh;
+    height: 120px;
+}
+
+.opener .loader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+
+}
+
+.opener .loader span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: #00ff0a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a, 0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+    animation: animate1 2s linear infinite;
+    animation-delay: calc(0.1s *var(--i));
+
+}
+
+@keyframes animate1 {
+    0% {
+        transform: scale(1);
+    }
+
+    80%,
+    100% {
+        transform: scale(0);
+    }
+}
+
 header {
     position: absolute;
     top: 0;
@@ -22,7 +90,7 @@ header {
 header .logo {
     color: #fff;
     text-transform: uppercase;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .toggle {
@@ -155,6 +223,7 @@ header .logo {
 }
 
 .menu {
+    background: #000;
     position: absolute;
     top: 0;
     right: 0;
@@ -163,10 +232,13 @@ header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 .menu ul {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu ul li {
@@ -174,13 +246,35 @@ header .logo {
 }
 
 .menu ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 2em;
+    /* transition: 0.2s; */
     text-decoration: none;
-    font-size: 24px;
-    color: #111;
+    /* font-size: 24px; */
+    color: #fff;
 }
 
-.menu ul li a:hover {
+/* .menu ul li a:hover {
     color: #03a9f4;
+} */
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.menu ul li:hover~.cursor,
+.logo:hover~.cursor {
+    transform: scale(3);
 }
 
 @media (max-width: 991px) {
