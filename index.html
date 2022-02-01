@@ -1,0 +1,103 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>NIRMALLYA DEY</title>
+  </head>
+  <body>
+    <!-- <section class="opener">
+      <div class="loader">
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3"></span>
+        <span style="--i: 4"></span>
+        <span style="--i: 5"></span>
+        <span style="--i: 6"></span>
+        <span style="--i: 7"></span>
+        <span style="--i: 8"></span>
+        <span style="--i: 9"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 17"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+      </div>
+    </section> -->
+    <section class="showcase">
+      <header>
+        <h2 class="logo animate__bounceInLeft delay-2s">NIRMALLYA DEY</h2>
+        <div class="toggle"></div>
+      </header>
+      <video src="video/video.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>A Positive Mindset</h2>
+        <h3>brings positive things.</h3>
+        <p>
+          Having a positive mindset, or positive mental attitude, means that you
+          are optimistic about the world around you, and you expect that good
+          things will happen to you. In contrast, a negative attitude, or
+          mindset, indicates that you expect bad things to happen and struggle
+          to perceive the world in a positive way.
+        </p>
+        <a
+          href="https://positivepsychology.com/positive-mindset/"
+          target="_blank"
+          >Explore</a
+        >
+      </div>
+      <ul class="social">
+        <li>
+          <a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/DeyMilo"
+            ><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/milo.dey/"
+            ><img src="https://i.ibb.co/ySwtH4B/instagram.png"
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <div class="cursor"></div>
+      </ul>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".toggle");
+      const showcase = document.querySelector(".showcase");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        showcase.classList.toggle("active");
+      });
+
+      const cursor = document.querySelector(".cursor");
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+      });
+    </script>
+  </body>
+</html>
